@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1020">
+<title>Exa IA Création — Studio IA</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2e;--panel2:#18233b;--line:#263450;--text:#f4f7ff;--muted:#aab6cf;--violet:#8b5cf6;--cyan:#35d6c5;--gold:#f4c96b;--radius:20px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top right,#182447 0,transparent 38%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.app{max-width:1280px;margin:auto;padding:18px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 2px 22px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:-.5px;font-size:19px}.logo{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--violet),var(--cyan));color:#091020;font-weight:950;font-size:19px;box-shadow:0 8px 30px #8b5cf633}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.5px;font-weight:700;margin-top:2px}.top-actions{display:flex;align-items:center;gap:10px}.badge{border:1px solid var(--line);border-radius:999px;padding:9px 12px;color:var(--muted);font-size:12px}.avatar{width:39px;height:39px;border-radius:50%;background:#273657;display:grid;place-items:center;font-weight:800}
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:20px}.sidebar{background:#0f1729a8;border:1px solid var(--line);border-radius:var(--radius);padding:15px;height:max-content;position:sticky;top:14px}.nav-label{color:#7483a3;font-size:10px;font-weight:800;letter-spacing:1.6px;padding:12px 10px 7px}.nav-btn{display:flex;align-items:center;gap:11px;width:100%;text-align:left;border:0;color:var(--muted);background:transparent;padding:12px;border-radius:12px;margin:2px 0;font-weight:650}.nav-btn.active,.nav-btn:hover{background:linear-gradient(90deg,#8b5cf626,#35d6c510);color:var(--text)}.nav-btn.active{box-shadow:inset 3px 0 var(--violet)}.nav-icon{width:20px;text-align:center}.side-note{margin-top:22px;padding:14px;border-radius:15px;background:linear-gradient(135deg,#8b5cf621,#35d6c511);border:1px solid #8b5cf633}.side-note strong{font-size:13px}.side-note p{font-size:11px;line-height:1.5;color:var(--muted)}.btn{border:0;border-radius:12px;padding:12px 15px;font-weight:800;transition:.2s}.btn:hover{transform:translateY(-1px)}.primary{background:linear-gradient(120deg,var(--violet),#6d74ff);color:white;box-shadow:0 8px 22px #6d5ce333}.secondary{background:#222f4b;color:var(--text);border:1px solid var(--line)}.ghost{background:transparent;color:var(--muted);border:1px solid var(--line)}.small{padding:9px 12px;font-size:12px}.content{min-width:0}.hero{border:1px solid #3a4770;border-radius:24px;padding:28px;position:relative;overflow:hidden;background:linear-gradient(115deg,#1a2440 0%,#171a38 58%,#17373e 100%);margin-bottom:20px}.hero:after{content:"✦";position:absolute;right:8%;top:-30px;font-size:190px;color:#ffffff08;pointer-events:none}.eyebrow{display:inline-flex;align-items:center;gap:7px;color:#c8b9ff;font-size:11px;font-weight:850;letter-spacing:1.5px;text-transform:uppercase}.dot{width:7px;height:7px;background:var(--cyan);border-radius:50%;box-shadow:0 0 12px var(--cyan)}h1{font-size:clamp(27px,4vw,42px);letter-spacing:-1.5px;line-height:1.08;margin:14px 0 12px;max-width:620px}.hero p{color:#c1cce3;line-height:1.65;max-width:570px;font-size:14px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}.stat{padding:17px;border-radius:17px;border:1px solid var(--line);background:#111a2c}.stat-top{color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:6px}.stat strong{display:block;font-size:25px;margin-top:10px;letter-spacing:-.7px}.stat small{font-size:11px;color:#7e8eae}.section{margin:24px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:14px}.section-head h2{font-size:19px;letter-spacing:-.4px;margin:0}.section-head p{font-size:12px;color:var(--muted);margin:5px 0 0}.text-link{color:#c3b5ff;font-size:12px;font-weight:800;border:0;background:none}.studio{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(230px,.9fr);gap:14px}.card{background:linear-gradient(150deg,#141e33,#101829);border:1px solid var(--line);border-radius:var(--radius);padding:20px;min-width:0}.card h3{font-size:15px;margin:0 0 7px}.muted{color:var(--muted);font-size:12px;line-height:1.55}.field{display:block;margin-top:15px}.field label{display:block;font-size:12px;font-weight:750;margin-bottom:8px;color:#d7def0}.field textarea,.field input,.field select{width:100%;border:1px solid #2b3957;border-radius:12px;background:#0b1324;color:var(--text);padding:12px;outline:none}.field textarea{resize:vertical;min-height:110px;line-height:1.5}.field textarea:focus,.field input:focus,.field select:focus{border-color:var(--violet);box-shadow:0 0 0 3px #8b5cf622}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.full{width:100%;margin-top:16px}.hint{font-size:10px;color:#8391ad;margin-top:9px;line-height:1.5}.preview{display:flex;flex-direction:column;min-height:100%}.preview-screen{flex:1;min-height:215px;border-radius:16px;border:1px solid #344365;background:radial-gradient(circle at 50% 45%,#303d6b 0,#171e38 43%,#0c1324 78%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:18px;position:relative;overflow:hidden}.preview-screen:before,.preview-screen:after{content:"";position:absolute;width:150px;height:150px;border:1px solid #8b5cf62b;border-radius:50%}.preview-screen:after{width:220px;height:220px}.play{width:55px;height:55px;border-radius:18px;background:linear-gradient(135deg,var(--violet),var(--cyan));display:grid;place-items:center;color:#0b1020;font-size:20px;z-index:1;margin-bottom:15px}.preview-screen strong,.preview-screen span{z-index:1}.preview-screen strong{font-size:14px}.preview-screen span{font-size:11px;color:var(--muted);margin-top:6px}.preview-footer{display:flex;justify-content:space-between;align-items:center;margin-top:13px;font-size:11px;color:var(--muted)}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.product{border:1px solid var(--line);border-radius:17px;background:#121b2e;overflow:hidden}.product-art{height:125px;display:grid;place-items:center;font-size:40px;background:radial-gradient(circle at 30% 20%,#4b3b85,#202a4a 60%,#162a39)}.product:nth-child(2) .product-art{background:radial-gradient(circle at 30% 20%,#356c75,#1c304b 65%,#151d35)}.product:nth-child(3) .product-art{background:radial-gradient(circle at 30% 20%,#79572d,#32284a 65%,#171c31)}.product-info{padding:14px}.product-info h3{font-size:13px;margin:0 0 7px}.product-info p{color:var(--muted);font-size:11px;line-height:1.5;min-height:34px;margin:0 0 12px}.price-row{display:flex;align-items:center;justify-content:space-between;gap:8px}.price{font-weight:900;font-size:17px}.pill{font-size:10px;border-radius:999px;padding:5px 8px;background:#24304b;color:#b9c6df}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}.feature-list{display:grid;gap:12px;margin-top:15px}.feature{display:flex;gap:10px;align-items:flex-start}.check{width:25px;height:25px;border-radius:8px;display:grid;place-items:center;background:#35d6c51c;color:var(--cyan);flex-shrink:0}.feature strong{display:block;font-size:12px}.feature span{display:block;font-size:11px;color:var(--muted);margin-top:3px;line-height:1.45}.notice{border:1px solid #78613c;background:#4d3c1a30;color:#e8d8b3;border-radius:13px;padding:13px;font-size:11px;line-height:1.55;margin-top:14px}.footer{border-top:1px solid var(--line);margin-top:30px;padding:18px 0 10px;color:#7483a3;font-size:11px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.page{display:none}.page.active{display:block}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#f4f7ff;color:#0b1020;padding:12px 17px;border-radius:12px;font-size:12px;font-weight:800;box-shadow:0 10px 40px #0007;transition:.25s;z-index:20;max-width:90vw}.toast.show{opacity:1;transform:translate(-50%,0)}.mobile-nav{display:none}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static;display:flex;overflow:auto;gap:5px;padding:8px}.nav-label,.side-note{display:none}.nav-btn{white-space:nowrap;width:auto;padding:10px 12px}.nav-icon{width:auto}.studio{grid-template-columns:1fr}.preview-screen{min-height:180px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.app{padding:12px}.topbar{padding-bottom:14px}.brand{font-size:16px}.badge{display:none}.hero{padding:21px}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:20px}.stat-top{font-size:10px}.product-grid,.two-col{grid-template-columns:1fr}.product{display:grid;grid-template-columns:100px 1fr}.product-art{height:100%;min-height:145px;font-size:32px}.product-info p{min-height:0}.card{padding:15px}.form-row{grid-template-columns:1fr}.section-head{align-items:flex-start}.hero-actions .btn{flex:1}.footer{display:block;line-height:1.8}}
+</style>
+
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#0b1020">
+<link rel="icon" href="./icon-192.svg" type="image/svg+xml">
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(() => {}));
+}
+</script>
+
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="logo">EX</div><div>Exa IA Création<small>AI CREATIVE STUDIO</small></div></div>
+    <div class="top-actions"><span class="badge">✦ Studio créatif</span><div class="avatar">EX</div></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navigation principale">
+      <div class="nav-label">ESPACE DE TRAVAIL</div>
+      <button class="nav-btn active" data-page="home"><span class="nav-icon">⌂</span> Tableau de bord</button>
+      <button class="nav-btn" data-page="studio"><span class="nav-icon">✧</span> Studio IA</button>
+      <button class="nav-btn" data-page="shop"><span class="nav-icon">▣</span> Boutique</button>
+      <button class="nav-btn" data-page="payments"><span class="nav-icon">◇</span> Paiements</button>
+      <div class="nav-label">VOTRE COMPTE</div>
+      <button class="nav-btn" data-page="about"><span class="nav-icon">ⓘ</span> À propos</button>
+      <div class="side-note"><strong>Votre créativité, amplifiée.</strong><p>Créez des idées, préparez vos vidéos et développez votre activité numérique.</p><button class="btn secondary small" onclick="showToast('Le studio de démonstration est prêt.')">Découvrir</button></div>
+    </aside>
+    <main class="content">
+      <section class="page active" id="page-home">
+        <div class="hero">
+          <span class="eyebrow"><i class="dot"></i> Votre studio créatif IA</span>
+          <h1>Donnez vie à vos idées.<br>Créez sans limites.</h1>
+          <p>Un espace pour préparer vos vidéos IA, développer vos histoires et vendre vos créations numériques — directement depuis votre téléphone.</p>
+          <div class="hero-actions"><button class="btn primary" onclick="go('studio')">✦ Ouvrir le studio IA</button><button class="btn secondary" onclick="go('shop')">Explorer la boutique ↗</button></div>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="stat-top">Studio IA <span>✧</span></div><strong>Prêt</strong><small>Interface de démonstration</small></div>
+          <div class="stat"><div class="stat-top">Boutique <span>▣</span></div><strong>3 produits</strong><small>Exemples modifiables</small></div>
+          <div class="stat"><div class="stat-top">Paiements <span>◇</span></div><strong>À configurer</strong><small>Airtel Money · M-Pesa</small></div>
+        </div>
+        <section class="section">
+          <div class="section-head"><div><h2>Commencez à créer</h2><p>Choisissez une action pour avancer dans votre projet.</p></div></div>
+          <div class="studio">
+            <div class="card"><h3>✧ Générateur d'idées vidéo</h3><p class="muted">Décrivez une scène et préparez un prompt utilisable dans un service de génération vidéo IA.</p>
+              <div class="field"><label for="quickPrompt">Votre idée</label><textarea id="quickPrompt" placeholder="Ex. Une petite fille découvre un jardin magique au lever du soleil..."></textarea></div>
+              <button class="btn primary full" onclick="preparePrompt('quickPrompt')">Préparer mon prompt →</button>
+            </div>
+            <div class="card preview"><h3>Votre espace de création</h3><p class="muted">Une interface pensée pour vos vidéos publicitaires, histoires et contenus verticaux.</p><div class="preview-screen"><div class="play">▶</div><strong>Votre prochaine vidéo commence ici</strong><span>9:16 · 16:9 · Publicité · Histoire</span></div><div class="preview-footer"><span>Studio Exa IA</span><span>● Démo</span></div></div>
+          </div>
+        </section>
+        <section class="section"><div class="section-head"><div><h2>Produits à découvrir</h2><p>Exemples de produits numériques que vous pouvez vendre.</p></div><button class="text-link" onclick="go('shop')">Voir la boutique →</button></div><div class="product-grid" id="homeProducts"></div></section>
+      </section>
+
+      <section class="page" id="page-studio">
+        <div class="section-head"><div><span class="eyebrow">✦ CRÉATION</span><h2 style="margin-top:8px;font-size:27px">Studio IA</h2><p>Transformez une idée en prompt détaillé pour un outil vidéo IA.</p></div></div>
+        <div class="studio">
+          <div class="card"><h3>Créer une vidéo</h3><p class="muted">Plus votre description est précise, meilleur sera le résultat dans un générateur compatible.</p>
+            <div class="field"><label for="idea">Décrivez votre vidéo</label><textarea id="idea" placeholder="Qui est le personnage ? Que fait-il ? Où se déroule la scène ? Quelle ambiance souhaitez-vous ?"></textarea></div>
+            <div class="form-row"><div class="field"><label for="format">Format vidéo</label><select id="format"><option>Vertical 9:16 (Reels / TikTok)</option><option>Horizontal 16:9 (YouTube)</option><option>Carré 1:1 (publication)</option></select></div><div class="field"><label for="style">Style visuel</label><select id="style"><option>Cinématique réaliste</option><option>Dessin animé 3D</option><option>Animation 2D</option><option>Publicité professionnelle</option><option>Conte pour enfants</option></select></div></div>
+            <div class="form-row"><div class="field"><label for="duration">Durée souhaitée</label><select id="duration"><option>10 secondes</option><option>15 secondes</option><option>30 secondes</option><option>60 secondes</option></select></div><div class="field"><label for="voice">Voix / narration</label><select id="voice"><option>Voix française douce</option><option>Voix française énergique</option><option>Sans narration</option><option>Dialogue entre personnages</option></select></div></div>
+            <button class="btn primary full" onclick="generatePrompt()">✧ Préparer le prompt professionnel</button><p class="hint">Cette version prépare le texte seulement. La génération réelle nécessite de connecter une API vidéo ou un service externe.</p>
+          </div>
+          <div class="card"><h3>Prompt préparé</h3><p class="muted">Votre brief détaillé apparaîtra ici et pourra être copié.</p><textarea id="result" style="min-height:285px" placeholder="Votre prompt apparaîtra ici..." readonly></textarea><button class="btn secondary full" onclick="copyPrompt()">Copier le prompt</button><button class="btn ghost full" onclick="clearPrompt()">Effacer</button><div class="notice">🔒 Aucun paiement n'est prélevé depuis cette démonstration. La création vidéo et les comptes clients ne sont pas encore connectés.</div></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-shop">
+        <div class="section-head"><div><span class="eyebrow">▣ BOUTIQUE NUMÉRIQUE</span><h2 style="margin-top:8px;font-size:27px">Vos créations, à vendre.</h2><p>Remplacez ces exemples par vos vrais fichiers et vos prix.</p></div></div>
+        <div class="product-grid" id="shopProducts"></div>
+        <div class="notice">Les boutons d'achat sont des démonstrations. Avant de recevoir de l'argent, il faudra ajouter un moyen de paiement réel et vérifier chaque transaction.</div>
+      </section>
+
+      <section class="page" id="page-payments">
+        <div class="section-head"><div><span class="eyebrow">◇ ENCAISSEMENTS</span><h2 style="margin-top:8px;font-size:27px">Configuration des paiements</h2><p>Préparez les informations à intégrer pour vos clients.</p></div></div>
+        <div class="two-col">
+          <div class="card"><h3>📱 Airtel Money</h3><p class="muted">Prévoir un compte marchand ou une solution de paiement compatible avec votre pays et votre activité.</p><div class="pill">Non connecté</div><div class="field"><label>Numéro marchand (à ajouter plus tard)</label><input placeholder="Ex. +243 …" disabled></div></div>
+          <div class="card"><h3>📲 M-Pesa</h3><p class="muted">Vérifier l'accès à une API ou à un prestataire qui prend en charge les paiements en RDC.</p><div class="pill">Non connecté</div><div class="field"><label>Identifiant marchand (à ajouter plus tard)</label><input placeholder="À configurer" disabled></div></div>
+        </div>
+        <div class="notice">Ne saisissez jamais votre code PIN, votre mot de passe ou votre code secret dans ce site de démonstration. Le branchement des paiements doit se faire avec un fournisseur officiel et une vérification de transaction côté serveur.</div>
+      </section>
+
+      <section class="page" id="page-about">
+        <div class="section-head"><div><span class="eyebrow">ⓘ LE PROJET</span><h2 style="margin-top:8px;font-size:27px">À propos d'Exa IA Création</h2><p>Une base de départ pour une plateforme créative.</p></div></div>
+        <div class="card"><h3>Notre objectif</h3><p class="muted">Aider les créateurs à préparer des vidéos, raconter des histoires, concevoir des publicités et vendre leurs produits numériques dans un espace simple d'utilisation.</p><div class="feature-list">
+          <div class="feature"><div class="check">✓</div><div><strong>Interface adaptée au mobile</strong><span>Le site s'adapte aux écrans Android, tablette et ordinateur.</span></div></div>
+          <div class="feature"><div class="check">✓</div><div><strong>Studio de préparation vidéo</strong><span>Créer des prompts structurés avant de les envoyer à un outil IA compatible.</span></div></div>
+          <div class="feature"><div class="check">✓</div><div><strong>Boutique numérique</strong><span>Présenter vos vidéos, jeux, guides PDF et packs.</span></div></div>
+          <div class="feature"><div class="check">↗</div><div><strong>Prochaines étapes</strong><span>Connecter une API vidéo, un backend sécurisé, les paiements et la livraison automatique.</span></div></div>
+        </div></div>
+      </section>
+      <footer class="footer"><span>© 2026 Exa IA Création</span><span>Prototype web · Version 1.0 · Mobile-first</span></footer>
+    </main>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const products=[
+ {icon:"🎬",name:"Vidéo publicitaire IA",desc:"Une vidéo promotionnelle courte pour présenter une marque.",price:"5 $",tag:"Vidéo"},
+ {icon:"📚",name:"Guide numérique PDF",desc:"Un guide pratique à télécharger après achat.",price:"3 $",tag:"PDF"},
+ {icon:"🎮",name:"Pack de créations",desc:"Un pack de contenus numériques pour démarrer.",price:"10 $",tag:"Pack"}
+];
+function productCard(p){return `<article class="product"><div class="product-art">${p.icon}</div><div class="product-info"><span class="pill">${p.tag}</span><h3 style="margin-top:9px">${p.name}</h3><p>${p.desc}</p><div class="price-row"><span class="price">${p.price}</span><button class="btn secondary small" onclick="buyDemo('${p.name.replace(/'/g,"\\'")}')">Détails</button></div></div></article>`}
+document.getElementById('homeProducts').innerHTML=products.slice(0,3).map(productCard).join('');
+document.getElementById('shopProducts').innerHTML=products.map(productCard).join('');
+function go(name){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+name).classList.add('active');document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.page===name));window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nav-btn').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove('show'),2800)}
+function preparePrompt(id){const val=document.getElementById(id).value.trim();if(!val){showToast('Écris d’abord ton idée vidéo.');go('studio');return}document.getElementById('idea').value=val;go('studio');generatePrompt();showToast('Ton idée a été transférée au studio.')}
+function generatePrompt(){const idea=document.getElementById('idea').value.trim();if(!idea){showToast('Décris d’abord la vidéo que tu veux créer.');return}const format=document.getElementById('format').value,style=document.getElementById('style').value,duration=document.getElementById('duration').value,voice=document.getElementById('voice').value;const prompt=`Créer une vidéo de ${duration}, format ${format}.\n\nIDÉE ET ACTION : ${idea}\n\nDIRECTION ARTISTIQUE : ${style}. Composition soignée, mouvements naturels, éclairage cohérent, détails nets et continuité visuelle entre les plans.\n\nSON : ${voice}. Le son doit être clair et adapté à l'ambiance.\n\nSTRUCTURE : commencer par une scène qui attire l'attention, développer l'action de manière facile à comprendre, puis terminer par une conclusion visuelle mémorable.\n\nQUALITÉ : rendu professionnel, personnages cohérents, expressions naturelles, aucun texte déformé, aucun logo non demandé. Respecter le format choisi et garder une zone sûre pour les sous-titres.`;document.getElementById('result').value=prompt;showToast('Prompt professionnel préparé !')}
+async function copyPrompt(){const r=document.getElementById('result');if(!r.value){showToast('Prépare d’abord un prompt.');return}try{await navigator.clipboard.writeText(r.value);showToast('Prompt copié !')}catch(e){r.select();document.execCommand('copy');showToast('Prompt sélectionné/copier si demandé.')}}
+function clearPrompt(){document.getElementById('result').value='';document.getElementById('idea').value='';showToast('Le formulaire a été effacé.')}
+function buyDemo(name){showToast('Démo : l’achat de « '+name+' » n’est pas encore connecté.')}
+</script>
+</body>
+</html>
